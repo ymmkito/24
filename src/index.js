@@ -76,28 +76,41 @@ console.clear();
 // const arr7 = [...arr4, ...arr5];
 // console.log(arr7);
 
-const nameArr = ["田中", "山田", "aiueo"];
+// const nameArr = ["田中", "山田", "aiueo"];
 
-// for(let index = 0 ; index < nameArr.length ; index++){
-// 	console.log(nameArr[index]);
-// }
+// // for(let index = 0 ; index < nameArr.length ; index++){
+// // 	console.log(nameArr[index]);
+// // }
 
-// const nameArr2 = nameArr.map((name)=>{
-// 	return name;
+// // const nameArr2 = nameArr.map((name)=>{
+// // 	return name;
+// // });
+// // console.log(nameArr2);
+
+// nameArr.map((name) => console.log(name));
+// nameArr.map((name, index) => console.log(`${index}番目は${name}です`));
+
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "aiueo") return name;
+//   else return `${name}さん`;
 // });
-// console.log(nameArr2);
+// console.log(newNameArr);
 
-nameArr.map((name) => console.log(name));
-nameArr.map((name, index) => console.log(`${index}番目は${name}です`));
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num) => {
+//   return num % 2 === 1;
+// });
+// console.log(newNumArr);
 
-const newNameArr = nameArr.map((name) => {
-  if (name === "aiueo") return name;
-  else return `${name}さん`;
-});
-console.log(newNameArr);
+const num = 1300;
+// console.log(num.toLocaleString());
 
-const numArr = [1, 2, 3, 4, 5];
-const newNumArr = numArr.filter((num) => {
-  return num % 2 === 1;
-});
-console.log(newNumArr);
+const formattedNum =
+  typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
+
+console.log(formattedNum);
+
+const checkSum = (num1, num2) => {
+  return num1 + num2 > 100 ? "100を超えています" : "OK";
+};
+console.log(checkSum(50, 60));
